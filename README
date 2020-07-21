@@ -1,3 +1,9 @@
+## Patches applied
+- dpms
+- blur-pixelated-screen
+
+## Original README
+```
 slock - simple screen locker
 ============================
 simple screen locker utility for X.
@@ -22,3 +28,4 @@ Afterwards enter the following command to build and install slock
 Running slock
 -------------
 Simply invoke the 'slock' command. To get out of it, enter your password.
+```

@@ -455,12 +455,10 @@ main(int argc, char **argv) {
 		XFreePixmap(dpy, locks[s]->drawable);
 		XFreeGC(dpy, locks[s]->gc);
 	}
-	XSync(dpy, 0);
-	XCloseDisplay(dpy);
-
 	/* reset DPMS values to inital ones */
 	DPMSSetTimeouts(dpy, standby, suspend, off);
 	XSync(dpy, 0);
+	XCloseDisplay(dpy);
 
 	return 0;
 }

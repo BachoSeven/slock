@@ -4,6 +4,7 @@ static const char *group = "nobody";
 
 /* Solarized */
 // static const char *colorname[NUMCOLS] = {
+	// [BACKGROUND] = "#002b36",     [> after initialization <]
 	// [INIT] =   "#073642",     /* after initialization */
 	// [INPUT] =  "#2aa198",   /* during input */
 	// [FAILED] = "#dc322f",   /* wrong password */
@@ -11,7 +12,8 @@ static const char *group = "nobody";
 
 /* Gruvbox low-contrast */
 static const char *colorname[NUMCOLS] = {
-	[INIT] =   "#32302f",     /* after initialization */
+	[BACKGROUND] = "#1d2021",     /* after initialization */
+	[INIT] =   "#2d2d2d",     /* after initialization */
 	[INPUT] =  "#689d6a",   /* during input */
 	[FAILED] = "#cc241d",   /* wrong password */
 };
@@ -20,4 +22,23 @@ static const char *colorname[NUMCOLS] = {
 static const int failonclear = 0;
 
 /* time in seconds before the monitor shuts down */
-static const int monitortime = 3;
+static const int monitortime = 4;
+
+/* insert grid pattern with scale 1:1, the size can be changed with logosize */
+static const int logosize = 77;
+static const int logow = 12;	/* grid width and height for right center alignment*/
+static const int logoh = 6;
+
+static XRectangle rectangles[9] = {
+	/* x	y	w	h */
+	{ 0,	3,	1,	3 },
+	{ 1,	3,	2,	1 },
+	{ 0,	5,	8,	1 },
+	{ 3,	0,	1,	5 },
+	{ 5,	3,	1,	2 },
+	{ 7,	3,	1,	2 },
+	{ 8,	3,	4,	1 },
+	{ 9,	4,	1,	2 },
+	{ 11,	4,	1,	2 },
+
+};
